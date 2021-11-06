@@ -1,4 +1,11 @@
 import { GraphQLSchema, GraphQLString, GraphQLObjectType, GraphQLID, GraphQLInt, GraphQLList } from "graphql";
+import mongoose from "mongoose";
+
+mongoose.connect(
+    "mongodb+srv://rafa:asdasd@cluster0.a8xr2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    {},
+    () => console.log("Connected to MongoDB")
+);
 
 const books = [
     { name: "Name of the Wind", genre: "Fantasy", id: "1", authorId: "1" },
